@@ -25,4 +25,4 @@ jobs:
           ./gradlew build
 
       - name: Run Java class
-        run: ./gradlew runMyApp
+        run: ./gradlew runTelegramBotName
