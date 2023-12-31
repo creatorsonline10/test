@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+}
+
+dependencies {}
+
+task runTelegramBotName(type: JavaExec) {
+    main = 'TelegramBotNameMain'
+    classpath = sourceSets.main.runtimeClasspath
+}
