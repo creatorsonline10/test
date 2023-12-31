@@ -20,7 +20,7 @@ jobs:
           java-version: '11'
 
       - name: Compile Java class
-        run: javac MyApp.java
+        run: javac TelegramBotName.java
 
       - name: Run Java class
-        run: java MyApp
+        run: java TelegramBotName
