@@ -1,4 +1,4 @@
-name: Run My Java Class
+name: Build and Run
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  run-my-class:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,8 +19,8 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
 
-      - name: Compile Java class
-        run: javac TelegramBotNameMain.java
+      - name: Build with Gradle
+        run: ./gradlew build
 
       - name: Run Java class
-        run: java TelegramBotNameMain
+        run: ./gradlew runTelegramBotName
