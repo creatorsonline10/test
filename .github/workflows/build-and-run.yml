@@ -19,8 +19,10 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
 
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Grant execution permission and build with Gradle
+        run: |
+          chmod +x ./gradlew
+          ./gradlew build
 
       - name: Run Java class
-        run: ./gradlew runTelegramBotName
+        run: ./gradlew runMyApp
