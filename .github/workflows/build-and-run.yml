@@ -1,0 +1,26 @@
+name: Run My Java Class
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-my-class:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Compile Java class
+        run: javac MyApp.java
+
+      - name: Run Java class
+        run: java MyApp
